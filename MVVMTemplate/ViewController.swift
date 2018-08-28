@@ -11,6 +11,8 @@ import RxCocoa
 import RxSwift
 
 class ViewController: UIViewController,ViewModelAttaching,Connectable {
+    var disposeBag: DisposeBag!
+
     typealias SegueIdentifier = connectionId
 
     var viewModel: MainViewModel!
@@ -21,9 +23,9 @@ class ViewController: UIViewController,ViewModelAttaching,Connectable {
     }
 
     func bind(viewModel: MainViewModel) -> MainViewModel {
-        viewModel.showTrigger.observeOn(MainScheduler.instance).subscribe({ _ in
-            self.connect(.showImage, with: nil)
-        })
+        viewModel.showTrigger.observeOn(MainScheduler.instance).subscribe({ [weak self] _ in
+            self?.connect(.showImage, with: nil)
+        }).disposed(by: disposeBag)
         return viewModel
     }
     enum connectionId: CodingKey {
