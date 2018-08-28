@@ -28,6 +28,7 @@ class ViewController: UIViewController,ViewModelAttaching {
     @IBOutlet weak var refreshButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 

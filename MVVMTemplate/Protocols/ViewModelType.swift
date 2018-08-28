@@ -14,14 +14,14 @@ protocol ViewModelType {
     init(dependency: Dependency, bindings: Bindings)
 }
 
-enum Attachable<VM: ViewModelType> {
-    case detached(VM.Dependency)
-    //case attached(VM.Dependency, VM)
-    mutating func bind(_ bindings: VM.Bindings) -> VM {
-        switch self {
-        case let .detached(dependency):
-            let vm = VM(dependency: dependency, bindings: bindings)
-            return vm
-        }
-    }
-}
+//enum Attachable<VM: ViewModelType> {
+//    case detached(VM.Dependency)
+//    //case attached(VM.Dependency, VM)
+//    mutating func bind(_ bindings: VM.Bindings) -> VM {
+//        switch self {
+//        case let .detached(dependency):
+//            let vm = VM(dependency: dependency, bindings: bindings)
+//            return vm
+//        }
+//    }
+//}

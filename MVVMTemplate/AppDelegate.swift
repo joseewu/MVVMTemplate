@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let depedency = MainViewModel.Dependency()
+        if let VC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? ViewController {
+            VC.attach(wrapper: MainViewModel.self, dependency: depedency)
+            let navi = UINavigationController(rootViewController: VC)
+            self.window?.rootViewController = navi
+            self.window?.makeKeyAndVisible()
+
+        }
         return true
     }
 
@@ -90,4 +99,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
