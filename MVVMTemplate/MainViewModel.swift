@@ -18,9 +18,8 @@ class MainViewModel:ViewModelType {
     struct Bindings {
         let tap:Observable<Void>
     }
+    let showTrigger:Observable<Void>
     required init(dependency: MainViewModel.Dependency, bindings: MainViewModel.Bindings) {
-        bindings.tap.subscribe(onNext: { _ in
-            print("tap!!!")
-        }).disposed(by: disposeBag)
+        showTrigger = bindings.tap
     }
 }

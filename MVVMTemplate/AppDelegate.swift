@@ -14,18 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
         let depedency = MainViewModel.Dependency()
-        if let VC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as? ViewController {
-            VC.attach(wrapper: MainViewModel.self, dependency: depedency)
-            let navi = UINavigationController(rootViewController: VC)
-            self.window?.rootViewController = navi
-            self.window?.makeKeyAndVisible()
-
-        }
+        let mainVC = ViewController.convenienceInit("Main")
+        mainVC.attach(wrapper: MainViewModel.self, dependency: depedency)
+        let navi = UINavigationController(rootViewController: mainVC)
+        self.window?.rootViewController = navi
+        self.window?.makeKeyAndVisible()
         return true
     }
 

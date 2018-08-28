@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="MVVMTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,11 +45,40 @@
                     <navigationItem key="navigationItem" id="w3B-Ra-FbY"/>
                     <connections>
                         <outlet property="refreshButton" destination="lKt-Cs-0tA" id="GK8-hY-ACl"/>
+                        <segue destination="hES-sS-iQi" kind="show" identifier="showImage" id="HXZ-hL-nZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108" y="56"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WkN-HO-E7g">
+            <objects>
+                <viewController id="hES-sS-iQi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qwb-0r-kHI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RAC-Ff-NSS">
+                                <rect key="frame" x="87" y="243.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BSf-J1-nVP"/>
+                                    <constraint firstAttribute="width" secondItem="RAC-Ff-NSS" secondAttribute="height" multiplier="1:1" id="EbN-DY-sLA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RAC-Ff-NSS" firstAttribute="centerX" secondItem="krN-ux-aGz" secondAttribute="centerX" id="lCF-DX-ZTx"/>
+                            <constraint firstItem="RAC-Ff-NSS" firstAttribute="centerY" secondItem="krN-ux-aGz" secondAttribute="centerY" id="tgY-TH-6Np"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="krN-ux-aGz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZl-3J-Wng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="55"/>
         </scene>
     </scenes>
 </document>

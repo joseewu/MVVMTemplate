@@ -10,7 +10,9 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class ViewController: UIViewController,ViewModelAttaching {
+class ViewController: UIViewController,ViewModelAttaching,Connectable {
+    typealias SegueIdentifier = connectionId
+
     var viewModel: MainViewModel!
 
     var bindings: MainViewModel.Bindings {
@@ -19,16 +21,19 @@ class ViewController: UIViewController,ViewModelAttaching {
     }
 
     func bind(viewModel: MainViewModel) -> MainViewModel {
-
+        viewModel.showTrigger.observeOn(MainScheduler.instance).subscribe({ _ in
+            self.connect(.showImage, with: nil)
+        })
         return viewModel
     }
-
+    enum connectionId: CodingKey {
+        case showImage
+    }
     typealias ViewModel = MainViewModel
 
     @IBOutlet weak var refreshButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view, typically from a nib.
     }
 
