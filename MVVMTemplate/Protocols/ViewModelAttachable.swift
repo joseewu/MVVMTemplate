@@ -1,9 +1,7 @@
 //
 //  ViewModelAttachable.swift
-//  DramaTV
 //
-//  Created by joseewu on 2018/3/2.
-//  Copyright © 2018年 com.chocolabs.dramacrazy. All rights reserved.
+//  Created by joseewu
 //
 
 import UIKit

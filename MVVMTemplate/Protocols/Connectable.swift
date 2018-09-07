@@ -1,9 +1,7 @@
 //
 //  Connectable.swift
-//  MVVMTemplate
 //
-//  Created by joseewu on 2018/8/29.
-//  Copyright © 2018年 com.js. All rights reserved.
+//  Created by joseewu
 //
 //  see:https://www.natashatherobot.com/protocol-oriented-segue-identifiers-swift/ for more details
 

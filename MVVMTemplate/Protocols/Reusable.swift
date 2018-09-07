@@ -1,9 +1,7 @@
 //
 //  Reusable.swift
-//  MVVMTemplate
 //
-//  Created by joseewu on 2018/8/28.
-//  Copyright © 2018年 com.js. All rights reserved.
+//  Created by joseewu
 //
 
 import UIKit
