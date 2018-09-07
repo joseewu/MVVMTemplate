@@ -12,6 +12,7 @@
 		A470691A146CAC613B72CA59 /* Pods_MVVMTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767AFA55617463C777E21418 /* Pods_MVVMTemplateUITests.framework */; };
 		EB3D22DC2135A3A60033BCF3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D22DB2135A3A60033BCF3 /* Reusable.swift */; };
 		EB3D22DE2135ABF80033BCF3 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D22DD2135ABF80033BCF3 /* Connectable.swift */; };
+		EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */; };
 		EBECBD5521341B2B00791B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5421341B2B00791B98 /* AppDelegate.swift */; };
 		EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5621341B2B00791B98 /* ViewController.swift */; };
 		EBECBD5A21341B2B00791B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBECBD5821341B2B00791B98 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		CFB11A68DF0DCE8A4AD7F6F9 /* Pods_MVVMTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3D22DB2135A3A60033BCF3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		EB3D22DD2135ABF80033BCF3 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
+		EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		EBECBD5121341B2B00791B98 /* MVVMTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBECBD5421341B2B00791B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBECBD5621341B2B00791B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EB7AD2DD2142DCD600C530F3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		EB7AD2DE2142DD0100C530F3 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				EBECBD5621341B2B00791B98 /* ViewController.swift */,
+				EBECBD8B2134548500791B98 /* MainViewModel.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		EBECBD4821341B2B00791B98 = {
 			isa = PBXGroup;
 			children = (
@@ -149,10 +168,10 @@
 		EBECBD5321341B2B00791B98 /* MVVMTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				EBECBD85213422A000791B98 /* Protocols */,
 				EBECBD5421341B2B00791B98 /* AppDelegate.swift */,
-				EBECBD5621341B2B00791B98 /* ViewController.swift */,
-				EBECBD8B2134548500791B98 /* MainViewModel.swift */,
+				EBECBD85213422A000791B98 /* Protocol */,
+				EB7AD2DE2142DD0100C530F3 /* Feature */,
+				EB7AD2DD2142DCD600C530F3 /* Utility */,
 				EBECBD5821341B2B00791B98 /* Main.storyboard */,
 				EBECBD5E21341B2C00791B98 /* Assets.xcassets */,
 				EBECBD6021341B2C00791B98 /* LaunchScreen.storyboard */,
@@ -180,7 +199,7 @@
 			path = MVVMTemplateUITests;
 			sourceTree = "<group>";
 		};
-		EBECBD85213422A000791B98 /* Protocols */ = {
+		EBECBD85213422A000791B98 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				EBECBD86213422A000791B98 /* ViewModelAttachable.swift */,
@@ -188,7 +207,7 @@
 				EB3D22DB2135A3A60033BCF3 /* Reusable.swift */,
 				EB3D22DD2135ABF80033BCF3 /* Connectable.swift */,
 			);
-			path = Protocols;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +489,7 @@
 				EBECBD89213422A000791B98 /* ViewModelType.swift in Sources */,
 				EBECBD5521341B2B00791B98 /* AppDelegate.swift in Sources */,
 				EBECBD8C2134548500791B98 /* MainViewModel.swift in Sources */,
+				EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */,
 				EB3D22DC2135A3A60033BCF3 /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
