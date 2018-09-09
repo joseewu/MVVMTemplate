@@ -12,6 +12,8 @@
 		A470691A146CAC613B72CA59 /* Pods_MVVMTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767AFA55617463C777E21418 /* Pods_MVVMTemplateUITests.framework */; };
 		EB3D22DC2135A3A60033BCF3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D22DB2135A3A60033BCF3 /* Reusable.swift */; };
 		EB3D22DE2135ABF80033BCF3 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D22DD2135ABF80033BCF3 /* Connectable.swift */; };
+		EB6CA0E12144C4EA0076CEDF /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CA0E02144C4EA0076CEDF /* Bindable.swift */; };
+		EB6CA0E32144D6D20076CEDF /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */; };
 		EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */; };
 		EBECBD5521341B2B00791B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5421341B2B00791B98 /* AppDelegate.swift */; };
 		EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5621341B2B00791B98 /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 		CFB11A68DF0DCE8A4AD7F6F9 /* Pods_MVVMTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3D22DB2135A3A60033BCF3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		EB3D22DD2135ABF80033BCF3 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
+		EB6CA0E02144C4EA0076CEDF /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		EBECBD5121341B2B00791B98 /* MVVMTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBECBD5421341B2B00791B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,9 +207,11 @@
 			isa = PBXGroup;
 			children = (
 				EBECBD86213422A000791B98 /* ViewModelAttachable.swift */,
+				EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */,
 				EBECBD87213422A000791B98 /* ViewModelType.swift */,
 				EB3D22DB2135A3A60033BCF3 /* Reusable.swift */,
 				EB3D22DD2135ABF80033BCF3 /* Connectable.swift */,
+				EB6CA0E02144C4EA0076CEDF /* Bindable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6CA0E12144C4EA0076CEDF /* Bindable.swift in Sources */,
 				EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */,
 				EBECBD88213422A000791B98 /* ViewModelAttachable.swift in Sources */,
 				EB3D22DE2135ABF80033BCF3 /* Connectable.swift in Sources */,
@@ -491,6 +498,7 @@
 				EBECBD8C2134548500791B98 /* MainViewModel.swift in Sources */,
 				EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */,
 				EB3D22DC2135A3A60033BCF3 /* Reusable.swift in Sources */,
+				EB6CA0E32144D6D20076CEDF /* Button+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,8 @@ class ViewController: UIViewController,ViewModelAttaching,Connectable {
 
     var bindings: MainViewModel.Bindings {
         let tap = refreshButton.rx.tap.asObservable()
+        let hhh = Bindable<Action>(refreshButton)
+
         return MainViewModel.Bindings(tap: tap)
     }
 
