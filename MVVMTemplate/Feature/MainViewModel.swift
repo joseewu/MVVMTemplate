@@ -17,9 +17,15 @@ class MainViewModel:ViewModelType {
     }
     struct Bindings {
         let tap:Observable<Void>
+        let testAction:Action<UIButton>
     }
     let showTrigger:Observable<Void>
+    let showTrigger2:Action<UIButton>
     required init(dependency: MainViewModel.Dependency, bindings: MainViewModel.Bindings) {
         showTrigger = bindings.tap
+        showTrigger2 = bindings.testAction
+        showTrigger2.subscribe { (nut) in
+            print("jdifjsidfjis")
+        }
     }
 }
