@@ -10,22 +10,21 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class MainViewModel:ViewModelType {
-    private let disposeBag:DisposeBag = DisposeBag()
-    struct Dependency {
+class MainViewModel:Bindings {
+    var output: MainViewModel.Output!
 
-    }
-    struct Bindings {
+    struct Input {
         let tap:Observable<Void>
         let testAction:Action<UIButton>
     }
-    let showTrigger:Observable<Void>
-    let showTrigger2:Action<UIButton>
-    required init(dependency: MainViewModel.Dependency, bindings: MainViewModel.Bindings) {
-        showTrigger = bindings.tap
-        showTrigger2 = bindings.testAction
-        showTrigger2.subscribe { (nut) in
-            print("jdifjsidfjis")
-        }
+    struct Output {
+        let showTrigger:Observable<Void>
+        let showTrigger2:Action<UIButton>
     }
+    func bind(with input: MainViewModel.Input) {
+        output = MainViewModel.Output(showTrigger: input.tap, showTrigger2: input.testAction)
+
+    }
+    private let disposeBag:DisposeBag = DisposeBag()
+
 }

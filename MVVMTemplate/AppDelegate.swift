@@ -16,10 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-    
-        let depedency = MainViewModel.Dependency()
         let mainVC = ViewController.convenienceInit("Main")
-        mainVC.attach(wrapper: MainViewModel.self, dependency: depedency)
         let navi = UINavigationController(rootViewController: mainVC)
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
