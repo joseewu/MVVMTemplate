@@ -1,9 +1,6 @@
 //
 //  ViewModelSpec.swift
-//  Smile
 //
-//  Created by joseewu on 2018/12/1.
-//  Copyright © 2018 com.smile. All rights reserved.
 //
 
 import Foundation

@@ -10,7 +10,7 @@ import UIKit
 protocol Connectable {
     associatedtype SegueIdentifier: CodingKey
 }
-extension Connectable where Self:UIViewController, SegueIdentifier: CodingKey{
+extension Connectable where Self:UIViewController, SegueIdentifier: CodingKey { 
     func connect(_ identifier:SegueIdentifier, with sender:AnyObject?) {
         performSegue(withIdentifier: identifier.stringValue, sender: sender)
     }
