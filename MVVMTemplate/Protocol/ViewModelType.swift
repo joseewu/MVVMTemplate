@@ -17,9 +17,3 @@ protocol ServerConnection:Dependency {
 protocol InjectParameter:Dependency {
 //InjectParameter that need to
 }
-protocol Bindings {
-    associatedtype Input
-    associatedtype Output
-    var output:Output! {get set}
-    func bind(with input:Input)
-}

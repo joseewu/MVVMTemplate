@@ -15,6 +15,7 @@
 		EB6CA0E12144C4EA0076CEDF /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CA0E02144C4EA0076CEDF /* Bindable.swift */; };
 		EB6CA0E32144D6D20076CEDF /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */; };
 		EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */; };
+		EBE0B27F21B37B2800283610 /* ViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0B27E21B37B2800283610 /* ViewModelSpec.swift */; };
 		EBECBD5521341B2B00791B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5421341B2B00791B98 /* AppDelegate.swift */; };
 		EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5621341B2B00791B98 /* ViewController.swift */; };
 		EBECBD5A21341B2B00791B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBECBD5821341B2B00791B98 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		EB6CA0E02144C4EA0076CEDF /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		EBE0B27E21B37B2800283610 /* ViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelSpec.swift; sourceTree = "<group>"; };
 		EBECBD5121341B2B00791B98 /* MVVMTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBECBD5421341B2B00791B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBECBD5621341B2B00791B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				EBECBD86213422A000791B98 /* ViewModelAttachable.swift */,
 				EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */,
 				EBECBD87213422A000791B98 /* ViewModelType.swift */,
+				EBE0B27E21B37B2800283610 /* ViewModelSpec.swift */,
 				EB3D22DB2135A3A60033BCF3 /* Reusable.swift */,
 				EB3D22DD2135ABF80033BCF3 /* Connectable.swift */,
 				EB6CA0E02144C4EA0076CEDF /* Bindable.swift */,
@@ -489,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6CA0E12144C4EA0076CEDF /* Bindable.swift in Sources */,
+				EBE0B27F21B37B2800283610 /* ViewModelSpec.swift in Sources */,
 				EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */,
 				EBECBD88213422A000791B98 /* ViewModelAttachable.swift in Sources */,
 				EB3D22DE2135ABF80033BCF3 /* Connectable.swift in Sources */,

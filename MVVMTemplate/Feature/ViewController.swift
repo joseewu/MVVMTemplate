@@ -31,8 +31,6 @@ class ViewController: UIViewController,Connectable {
             return Observable.just(())
         }
         let buttonAction:Action<UIButton> = Action.init(refreshButton, events: .touchUpInside)
-        let input = MainViewModel.Input.init(tap: viewDidAppear, testAction: buttonAction)
-        viewModel.bind(with: input)
         viewModel.output.showTrigger2.subscribe { (btn) in
             print("didTap didTap")
         }

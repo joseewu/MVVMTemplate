@@ -10,20 +10,26 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class MainViewModel:Bindings {
+class MainViewModel:ViewModelInputsSpec {
+    var inputParas: MainViewModel.Inputs {
+        return Inputs(testAction: Action<UIButton>(UIButton(), events: .allTouchEvents))
+    }
+
+    var inputs: MainViewModel {
+        return self
+    }
+
+
+    typealias InputType = MainViewModel
+
     var output: MainViewModel.Output!
 
-    struct Input {
-        let tap:Observable<Void>
+    struct Inputs {
         let testAction:Action<UIButton>
     }
     struct Output {
         let showTrigger:Observable<Void>
         let showTrigger2:Action<UIButton>
-    }
-    func bind(with input: MainViewModel.Input) {
-        output = MainViewModel.Output(showTrigger: input.tap, showTrigger2: input.testAction)
-
     }
     private let disposeBag:DisposeBag = DisposeBag()
 
