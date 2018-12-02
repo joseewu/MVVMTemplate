@@ -10,6 +10,7 @@ pod 'RxNuke'
 pod 'RxDataSources', '~> 3.0'
 pod 'RxSwift',    '~> 4.0'
 pod 'RxCocoa',    '~> 4.0'
+pod 'ReachabilitySwift'
 end
 def test_sources
 #define your pod resources for unit test

@@ -13,8 +13,10 @@
 		EB3D22DC2135A3A60033BCF3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D22DB2135A3A60033BCF3 /* Reusable.swift */; };
 		EB3D22DE2135ABF80033BCF3 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3D22DD2135ABF80033BCF3 /* Connectable.swift */; };
 		EB6CA0E12144C4EA0076CEDF /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CA0E02144C4EA0076CEDF /* Bindable.swift */; };
-		EB6CA0E32144D6D20076CEDF /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */; };
 		EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */; };
+		EBDB46D621B429CA00434AFB /* ObservableCodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB46D521B429CA00434AFB /* ObservableCodableExtension.swift */; };
+		EBDB46D921B430BF00434AFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB46D721B4307A00434AFB /* User.swift */; };
+		EBDB46DB21B4321600434AFB /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB46DA21B4321600434AFB /* Wrapper.swift */; };
 		EBE0B27F21B37B2800283610 /* ViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0B27E21B37B2800283610 /* ViewModelSpec.swift */; };
 		EBECBD5521341B2B00791B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5421341B2B00791B98 /* AppDelegate.swift */; };
 		EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBECBD5621341B2B00791B98 /* ViewController.swift */; };
@@ -58,8 +60,10 @@
 		EB3D22DB2135A3A60033BCF3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		EB3D22DD2135ABF80033BCF3 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
 		EB6CA0E02144C4EA0076CEDF /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		EB7AD2DB2142DB1A00C530F3 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		EBDB46D521B429CA00434AFB /* ObservableCodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableCodableExtension.swift; sourceTree = "<group>"; };
+		EBDB46D721B4307A00434AFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EBDB46DA21B4321600434AFB /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 		EBE0B27E21B37B2800283610 /* ViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelSpec.swift; sourceTree = "<group>"; };
 		EBECBD5121341B2B00791B98 /* MVVMTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBECBD5421341B2B00791B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				EBECBD5421341B2B00791B98 /* AppDelegate.swift */,
+				EBDB46D521B429CA00434AFB /* ObservableCodableExtension.swift */,
+				EBDB46D721B4307A00434AFB /* User.swift */,
+				EBDB46DA21B4321600434AFB /* Wrapper.swift */,
 				EBECBD85213422A000791B98 /* Protocol */,
 				EB7AD2DE2142DD0100C530F3 /* Feature */,
 				EB7AD2DD2142DCD600C530F3 /* Utility */,
@@ -209,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				EBECBD86213422A000791B98 /* ViewModelAttachable.swift */,
-				EB6CA0E22144D6D20076CEDF /* Button+Extension.swift */,
 				EBECBD87213422A000791B98 /* ViewModelType.swift */,
 				EBE0B27E21B37B2800283610 /* ViewModelSpec.swift */,
 				EB3D22DB2135A3A60033BCF3 /* Reusable.swift */,
@@ -394,20 +400,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMTemplateTests/Pods-MVVMTemplateTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMTemplateTests/Pods-MVVMTemplateTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVMTemplateTests/Pods-MVVMTemplateTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMTemplateTests/Pods-MVVMTemplateTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1FE89947817CF46870F75C2 /* [CP] Embed Pods Frameworks */ = {
@@ -416,20 +424,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMTemplateUITests/Pods-MVVMTemplateUITests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMTemplateUITests/Pods-MVVMTemplateUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVMTemplateUITests/Pods-MVVMTemplateUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMTemplateUITests/Pods-MVVMTemplateUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E32457B4A699B510580030DE /* [CP] Check Pods Manifest.lock */ = {
@@ -456,11 +466,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMTemplate/Pods-MVVMTemplate-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMTemplate/Pods-MVVMTemplate-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxNuke/RxNuke.framework",
@@ -472,7 +484,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNuke.framework",
@@ -481,7 +495,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVMTemplate/Pods-MVVMTemplate-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMTemplate/Pods-MVVMTemplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -491,18 +505,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDB46D921B430BF00434AFB /* User.swift in Sources */,
 				EB6CA0E12144C4EA0076CEDF /* Bindable.swift in Sources */,
 				EBE0B27F21B37B2800283610 /* ViewModelSpec.swift in Sources */,
 				EBECBD5721341B2B00791B98 /* ViewController.swift in Sources */,
+				EBDB46D621B429CA00434AFB /* ObservableCodableExtension.swift in Sources */,
 				EBECBD88213422A000791B98 /* ViewModelAttachable.swift in Sources */,
 				EB3D22DE2135ABF80033BCF3 /* Connectable.swift in Sources */,
 				EBECBD5D21341B2B00791B98 /* MVVMTemplate.xcdatamodeld in Sources */,
 				EBECBD89213422A000791B98 /* ViewModelType.swift in Sources */,
 				EBECBD5521341B2B00791B98 /* AppDelegate.swift in Sources */,
 				EBECBD8C2134548500791B98 /* MainViewModel.swift in Sources */,
+				EBDB46DB21B4321600434AFB /* Wrapper.swift in Sources */,
 				EB7AD2DC2142DB1A00C530F3 /* HexColor.swift in Sources */,
 				EB3D22DC2135A3A60033BCF3 /* Reusable.swift in Sources */,
-				EB6CA0E32144D6D20076CEDF /* Button+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +729,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ECB49B25955F5007E296A8EB /* Pods-MVVMTemplateTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R2QCX6BSC;
@@ -735,7 +750,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2ADC3E48A7CBF0A8C56069C7 /* Pods-MVVMTemplateTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R2QCX6BSC;
@@ -757,7 +771,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6907DA3517AC7E26D007A651 /* Pods-MVVMTemplateUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R2QCX6BSC;
 				INFOPLIST_FILE = MVVMTemplateUITests/Info.plist;
@@ -778,7 +791,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DB22E02AC831D1C2A2F43D0 /* Pods-MVVMTemplateUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R2QCX6BSC;
 				INFOPLIST_FILE = MVVMTemplateUITests/Info.plist;
